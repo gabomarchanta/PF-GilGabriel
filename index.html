@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Wikimedia - Libros, Música y Películas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- CSS de iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Wikimedia - Libros, Música y Películas</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><a href="index.html"><img src="assets/wikimedia-logo.png" alt="Logo de Wikimedia"></a></li>
-                <li class="link"><a href="pages/libros.html">Libros</a></li>
-                <li class="link"><a href="pages/musica.html">Música</a></li>
-                <li class="link"><a href="pages/peliculas.html">Películas</a></li>
-                <li class="link"><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="hero">
-        <div class="etiqueta">
-            <h1>Wikimedia</h1>
-            <p>Tu fuente de información sobre libros, música y películas.</p>
-        </div>
-    </main>
+  <!-- HEADER -->
 
+  <header>
+    <nav class="navbar sticky-top">
+      <div class="container-md">
+        <a class="navbar-brand" href="#"><img src="assets/wikimedia-logo.png" alt="Logo de Wikimedia"></a>
+        <a class="navbar-brand" href="pages/libros.html"><i class="bi bi-book"></i><span>Libros</span></a>
+        <a class="navbar-brand" href="pages/musica.html"><i class="bi bi-music-note-list"></i><span>Música</span></a>
+        <a class="navbar-brand" href="pages/peliculas.html"><i class="bi bi-film"></i><span>Películas</span></a>
+        <a class="navbar-brand" href="pages/contacto.html"><i class="bi bi-pencil-square"></i><span>Contacto</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- PORTADA HERO -->
+    <section class="hero">
+      <article class="hero-content">
+        <h1>Wikimedia</h1>
+        <p>Tu fuente de información sobre libros, música y películas.</p>
+      </article>
+    </section>
+  
     <section class="destacados">
+      <article>
         <h2>Destacados</h2>
-        
-        <div class="item">
-            <div class="foto">
-                <img src="assets/hacedor-de-estrellas.jpg" alt="Tapa del libro">
+      </article>
+      
+      <article class="destacados-card">
+        <div class="card mb-3 col-lg-6">
+          <div class="row g-0">
+            <div class="card-header"><i class="bi bi-book"></i><span>Gonzalo Senestrari</span></div>
+            <div class="col-md-4">
+              <img src="/assets/la-odisea-del-cazador-de-fetiches.jpg" class="img-fluid rounded-start" alt="Tapa del libro de La Odisea del Cazador de Fetiches">
             </div>
-            <div class="info">
-                <h3>El Hacedor de Estrellas</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia commodi ipsum voluptas dignissimos doloribus magnam assumenda impedit excepturi, pariatur reprehenderit quaerat tempore eaque ullam sapiente?</p>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">La Odisea del Cazador de Fetiches</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam delectus voluptatum tempora animi vel quos.</p>
+                <p class="card-text"><small class="text-body-secondary">2024 - Editorial Noctambuland</small></p>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="item">
-            <div class="info">
-                <h3>La Grasa de las Capitales</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia commodi ipsum voluptas dignissimos doloribus magnam assumenda impedit excepturi, pariatur reprehenderit quaerat tempore eaque ullam sapiente?</p>
+  
+        <div class="card mb-3 col-lg-6">
+          <div class="row g-0">
+            <div class="card-header"><i class="bi bi-book"></i><span>Olaf Stapledon</span></div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Hacedor de Estrellas</h5>
+                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam delectus voluptatum tempora animi vel quos.</p>
+                <p class="card-text"><small class="text-body-secondary">2023 - Editorial Del Fondo</small></p>
+              </div>
             </div>
-            <div class="foto">
-                <img src="assets/la-grasa-de-las-capitales.jpg" alt="Tapa del disco">
-            </div>
-            
+            <div class="col-md-4">
+              <img src="/assets/hacedor-de-estrellas.jpg" class="img-fluid rounded-start" alt="Tapa del libro Hacedor de Estrellas">
+            </div>            
+          </div>
         </div>
-
+      </article>
+      
     </section>
 
-    <footer>
-        <p>&copy; 2024 Wikimedia - Libros, Música y Películas</p>
-    </footer>
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>&copy; 2024 Wikimedia - Libros, Música y Películas</p>
+</footer>
+
+
+  <!-- script de Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
