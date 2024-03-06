@@ -1,0 +1,193 @@
+
+/* Font e iconos de Bootstrap y Body */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import 'base/vars';
+@import 'base/reset';
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/footer';
+@import 'layouts/index';
+@import 'layouts/contacto';
+@import 'layouts/libros';
+@import 'layouts/musica';
+@import 'layouts/peliculas';
+
+
+
+
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: $tertiary-color;
+    padding: 20px 0;
+}
+
+
+
+
+
+/* Página de Películas */
+
+.hero-peliculas {
+    background-image: url("../assets/peliculas.jpg");
+}
+
+.contenedor {
+    display: flex;
+    gap: 15px;
+}
+
+.trailer {
+    background-color: $tertiary-color;
+
+    color: $primary-color;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px $tertiary-color;
+}
+
+.info p,
+.info h3{
+    padding: 0 20px 20px;
+}
+
+/* Página de Libros */
+
+.hero-libros {
+    background-image: url("../assets/libros.jpg");
+}
+
+.catalogo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.catalogo article {
+    background-color: $quaternary-color;
+    color: #ccc;
+}
+
+.foto-catalogo img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/* Página de Música */
+
+.hero-musica {
+    background-image: url("../assets/musica.jpg");
+}
+
+.contenedor-musica {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    
+}
+
+.playlists {
+    background-color: $quaternary-color;
+    color: $primary-color;
+    border-radius: 15px;
+}
+
+/* Contacto */
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    text-align: center;
+}
+
+.formulario-contacto label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario-contacto button {
+    background-color: $secondary-color;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.formulario-contacto button:hover {
+    background-color: #093d26;
+}
+
+
+/* Mediaqueries */
+
+@media (max-width: 768px) {
+    .navbar span {
+        display: none;
+    }
+
+    .hero {
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 85%;
+        align-items: center;
+        text-align: center;
+        border-left: 2px solid $quinary-color;
+    }
+    .destacados .card-body,
+    .destacados .img-fluid {
+        width: 100%;
+        max-height: none;
+        height: auto;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .peliculas {
+        padding: 0;
+    }
+
+    .trailer {
+        border-radius: 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .destacados-card {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+    .card {
+        width: 50%;
+    }
+    .contenedor-musica {
+        grid-template-columns: 1fr 1fr 1fr;        
+    }
+}

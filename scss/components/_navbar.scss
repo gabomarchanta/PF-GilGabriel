@@ -1,0 +1,25 @@
+/* Nav Header */
+
+.navbar {
+    background-color: $primary-color;
+    &-brand {
+        color: $secondary-color;
+    
+        font-size: 24px;
+        transition: 0.4s;
+        i {
+            padding-right: 7px;
+        }
+        &:focus, &:hover {
+            color: $quaternary-color;
+        }
+        img {
+            width: 120px;
+            height: auto;
+            transition: 0.4s;
+            &:hover {
+                transform: rotate(10deg);
+            }
+        }
+    }  
+}

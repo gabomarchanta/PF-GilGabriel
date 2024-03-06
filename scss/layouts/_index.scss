@@ -1,0 +1,35 @@
+/* Destacados */
+.destacados {
+    padding: 20px 100px;
+    &-card {
+        display: flex;
+        flex-direction: column;
+        .card {
+            /*width: 100%;*/
+            border: 1px solid $tertiary-color;
+            overflow: hidden;
+            &-header {
+                background-color: $tertiary-color;
+                color: #fff;
+                span {
+                    margin-left: 10px;
+                }
+            }
+            &-body {
+                max-height: 300px;
+            }
+            .col-md-8 {
+                height: 100%;
+                display: flex;
+            }   
+    }
+         
+    }
+    .img-fluid {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
